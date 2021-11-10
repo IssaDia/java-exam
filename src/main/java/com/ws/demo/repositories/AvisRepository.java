@@ -10,4 +10,5 @@ import java.util.List;
 @Repository
 public interface AvisRepository extends CrudRepository<Avis, Long> {
     List<Avis> findAllByJeu(Jeu jeu);
+    List<Avis> findTopByJeuOrderByDateEnvoiDesc(Jeu jeu);
 }

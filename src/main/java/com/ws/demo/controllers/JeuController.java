@@ -107,7 +107,7 @@ public class JeuController {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Serie introuvable");
 
         }
-        return avisRepository.findAllByJeu(jeu);
+        return avisRepository.findTopByJeuOrderByDateEnvoiDesc(jeu);
 
     }
 
